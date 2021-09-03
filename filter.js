@@ -37,8 +37,8 @@ const countries = [
     {name: 'United Kingdom', continent: 'Europe', speaksEnglish: true},
 ];
 // We want to create a new array in which we filter out all the English speaking countries
-// ES5 code version
 
+// ES5 code version
 //const nonEnglish = countries.filter(function(country) {
     //return !country.speaksEnglish
 //})
