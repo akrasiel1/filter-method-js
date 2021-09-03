@@ -16,3 +16,95 @@ Following that we evaluate `10 % 2 = 0`, which will evaluate as false, etc.
 
 `console.log(filterFive);`
 `[ 5, 15, 25, 35, 45, 55, 65 ]`
+
+In the example below, we have an array of objects called countries.
+ 
+   `const countries = [ ` 
+   
+    {name: 'Italy', continent: 'Europe', speaksEnglish: false}, 
+    
+    {name: 'Australia', continent: 'Oceania', speaksEnglish: true},  
+    
+    {name: 'Japan', continent: 'Asia', speaksEnglish: false},  
+    
+    {name: 'Gabon', continent: 'Africa', speaksEnglish: false},  
+    
+    {name: 'China', continent: 'Asia', speaksEnglish: false}, 
+    
+    {name: 'Chile', continent: 'South America', speaksEnglish: false},  
+    
+    {name: 'Vietnam', continent: 'Asia', speaksEnglish: false},  
+    
+    {name: 'Spain', continent: 'Europe', speaksEnglish: false},  
+    
+    {name: 'USA', continent: 'North America', speaksEnglish: true},  
+    
+    {name: 'Panama', continent: 'Central America', speaksEnglish: false},  
+    
+    {name: 'Nigeria', continent: 'Africa', speaksEnglish: true},  
+    
+    {name: 'Montenegro', continent: 'Europe', speaksEnglish: false},  
+    
+    {name: 'New Zealand', continent: 'Oceania', speaksEnglish: true},  
+    
+    {name: 'Costa Rica', continent: 'Central America', speaksEnglish: false},  
+    
+    {name: 'Ethiopia', continent: 'Africa', speaksEnglish: false},  
+    
+    {name: 'Hungary', continent: 'Europe', speaksEnglish: false},  
+    
+    {name: 'Kazakhstan', continent: 'Asia', speaksEnglish: true},  
+    
+    {name: 'Mexico', continent: 'North America', speaksEnglish: false},  
+    
+    {name: 'Chile', continent: 'South America', speaksEnglish: false},  
+    
+    {name: 'South Africa', continent: 'Africa', speaksEnglish: true},  
+    
+    {name: 'Australia', continent: 'Oceania', speaksEnglish: true},  
+    
+    {name: 'United Kingdom', continent: 'Europe', speaksEnglish: true} ];` 
+    
+We want to create a new array in which we filter out all the English speaking countries
+
+**ES5 code version**
+`const nonEnglish = countries.filter(function(country) {
+    return !country.speaksEnglish
+ });`
+
+As country.speakEnglish is implicitly expected the return true, we have to use the logical NOT operator `!` to reverse to false
+
+**ES6 version**
+`const nonEnglish = countries.filter(country => !country.speaksEnglish);`
+
+
+`console.log(nonEnglish);`
+
+`[`
+ `{ name: 'Italy', continent: 'Europe', speaksEnglish: false },`
+ 
+ `{ name: 'Japan', continent: 'Asia', speaksEnglish: false },`
+ 
+ `{ name: 'DR Congo', continent: 'Africa', speaksEnglish: false },`
+ 
+ `{ name: 'China', continent: 'Asia', speaksEnglish: false },`
+ 
+ `{ name: 'Chile', continent: 'South America', speaksEnglish: false },`
+ 
+ `{ name: 'Vietnam', continent: 'Asia', speaksEnglish: false },`
+ 
+ `{ name: 'Spain', continent: 'Europe', speaksEnglish: false },`
+ 
+ `{ name: 'Panama', continent: 'Central America', speaksEnglish: false },`
+ 
+ `{ name: 'Montenegro', continent: 'Europe', speaksEnglish: false },`
+ 
+ `{ name: 'Costa Rica', continent: 'Central America', speaksEnglish: false },`
+ 
+ `{ name: 'Ethiopia', continent: 'Africa', speaksEnglish: false },`
+ 
+ `{ name: 'Hungary', continent: 'Europe', speaksEnglish: false },`
+ 
+ `{ name: 'Mexico', continent: 'North America', speaksEnglish: false },`
+ 
+ `{ name: 'Chile', continent: 'South America', speaksEnglish: false } ]`
